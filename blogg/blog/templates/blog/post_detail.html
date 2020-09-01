@@ -1,0 +1,23 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+    {{ post.title  }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="padding-top: 60px">
+
+        <h4 class="mt-5">{{ post.title }}</h4>
+        <hr style="border-color: gray">
+        <img class="leftphoto" src="{{ post.photo }}" width="50%" >
+        <style>
+            .leftphoto {
+                float:left;
+                margin: 4px 20px 15px 0px;
+            }
+        </style>
+        <p>{{ post.body }}</p>
+        <div style="clear: left"></div>
+
+    </div>
+{% endblock %}
